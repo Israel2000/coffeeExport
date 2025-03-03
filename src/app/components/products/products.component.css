@@ -1,0 +1,15 @@
+.card img {
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 768px) {
+    .col-md-3 {
+      display: none; /* Hide filters on small screens */
+    }
+  
+    .col-md-9 {
+      width: 100%;
+    }
+  }
+  
