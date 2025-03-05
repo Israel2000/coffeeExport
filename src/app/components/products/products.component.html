@@ -2,357 +2,562 @@
 
 <div class="container my-5">
   <h1 class="text-center mb-4">Our Coffee Products</h1>
-  <!-- hr -->
   <hr />
-
-     <!-- Right: Product List -->
-        <div class="col-md-9">
-            <h4>Coffee Products</h4>
-            <div class="row justify-content-center">
-            <!-- Espresso -->
-            <div class="col-md-4 col-6 mb-4">
-                <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalEspresso">
-                <img src="../shopping-image.webp" class="card-img-top" alt="Espresso" />
-                <div class="card-body text-center">
-                    <h6 class="card-title">Espresso</h6>
-                    <p class="card-text">$3.99</p>
-                </div>
-                <div class="hover-sign">View Details</div>
-                </div>
-            </div>
-        
-            <!-- Latte -->
-            <div class="col-md-4 col-6 mb-4">
-                <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalLatte">
-                <img src="../shopping-image.webp" class="card-img-top" alt="Latte" />
-                <div class="card-body text-center">
-                    <h6 class="card-title">Latte</h6>
-                    <p class="card-text">$4.49</p>
-                </div>
-                <div class="hover-sign">View Details</div>
-                </div>
-            </div>
-        
-            <!-- Cappuccino -->
-            <div class="col-md-4 col-6 mb-4">
-                <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalCappuccino">
-                <img src="../shopping-image.webp" class="card-img-top" alt="Cappuccino" />
-                <div class="card-body text-center">
-                    <h6 class="card-title">Cappuccino</h6>
-                    <p class="card-text">$4.99</p>
-                </div>
-                <div class="hover-sign">View Details</div>
-                </div>
-            </div>
-        
-            <!-- Americano -->
-            <div class="col-md-4 col-6 mb-4">
-                <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalAmericano">
-                <img src="../shopping-image.webp" class="card-img-top" alt="Americano" />
-                <div class="card-body text-center">
-                    <h6 class="card-title">Americano</h6>
-                    <p class="card-text">$2.99</p>
-                </div>
-                <div class="hover-sign">View Details</div>
-                </div>
-            </div>
-        
-            <!-- Mocha -->
-            <div class="col-md-4 col-6 mb-4">
-                <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalMocha">
-                <img src="../shopping-image.webp" class="card-img-top" alt="Mocha" />
-                <div class="card-body text-center">
-                    <h6 class="card-title">Mocha</h6>
-                    <p class="card-text">$5.99</p>
-                </div>
-                <div class="hover-sign">View Details</div>
-                </div>
-            </div>
-        
-            <!-- Macchiato -->
-            <div class="col-md-4 col-6 mb-4">
-                <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalMacchiato">
-                <img src="../shopping-image.webp" class="card-img-top" alt="Macchiato" />
-                <div class="card-body text-center">
-                    <h6 class="card-title">Macchiato</h6>
-                    <p class="card-text">$4.29</p>
-                </div>
-                <div class="hover-sign">View Details</div>
-                </div>
-            </div>
-        
-            <!-- Flat White -->
-            <div class="col-md-4 col-6 mb-4 mx-auto">
-                <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalFlatWhite">
-                <img src="../shopping-image.webp" class="card-img-top" alt="Flat White" />
-                <div class="card-body text-center">
-                    <h6 class="card-title">Flat White</h6>
-                    <p class="card-text">$4.79</p>
-                </div>
-                <div class="hover-sign">View Details</div>
-                </div>
-            </div>
-            </div>
+  <div class="row">
+  <!-- Left: Product List -->
+  <div class="col-12 col-md-9">
+    <h4>Coffee Products</h4>
+    <div class="row g-4 justify-content-center">
+      <!-- Espresso -->
+      <div class="item-sizing col-6 col-md-4">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalEspresso">
+          <img src="../shopping-image.webp" class="card-img-top" alt="Espresso" />
+          <div class="card-body text-center">
+            <h6 class="card-title">Espresso</h6>
+            <p class="card-text">$3.99</p>
+          </div>
+          <div class="hover-sign">View Details</div>
         </div>
-  </div>
-            <!-- Bootstrap Modals for Each Product -->
-<!-- Modal for Espresso -->
-<div class="modal fade" id="modalEspresso" tabindex="-1" aria-labelledby="modalEspressoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalEspressoLabel">Espresso</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-6 text-center">
-                        <img src="../shopping-image.webp" class="img-fluid" alt="Espresso">
-                    </div>
-                    <div class="col-md-6">
-                        <h4 class="fw-bold">Espresso</h4>
-                        <p class="text-warning">⭐⭐⭐⭐⭐ (4.9/5) - 120 Reviews</p>
-                        <p><strong>Price:</strong> $3.99</p>
-                        <p>A strong and rich coffee shot with intense flavor.</p>
-                        <div class="d-flex align-items-center mb-3">
-                            <label for="quantityEspresso" class="me-2"><strong>Quantity:</strong></label>
-                            <input type="number" id="quantityEspresso" class="form-control" value="1" min="1" style="width: 70px;">
-                        </div>
-                        <button class="btn btn-success w-100">Processed with Checkout</button>
-                    </div>
-                </div>
+      </div>
 
-                <!-- Similar Products Section -->
-                <div class="similar-products mt-4">
-                    <h5 class="fw-bold">Similar Products</h5>
-                    <div class="row">
-                        <!-- Product 1 -->
-                        <div class="col-md-4">
-                            <div class="card" data-bs-toggle="modal" data-bs-target="#modalCappuccino">
-                                <img src="../cappuccino-image.webp" class="card-img-top" alt="Cappuccino">
-                                <div class="card-body">
-                                    <h5 class="card-title">Cappuccino</h5>
-                                    <p class="card-text">$4.49</p>
-                                    <button class="btn btn-outline-primary w-100">View Details</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product 2 -->
-                        <div class="col-md-4">
-                            <div class="card" data-bs-toggle="modal" data-bs-target="#modalLatte">
-                                <img src="../latte-image.webp" class="card-img-top" alt="Latte">
-                                <div class="card-body">
-                                    <h5 class="card-title">Latte</h5>
-                                    <p class="card-text">$3.89</p>
-                                    <button class="btn btn-outline-primary w-100">View Details</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product 3 -->
-                        <div class="col-md-4">
-                            <div class="card" data-bs-toggle="modal" data-bs-target="#modalMocha">
-                                <img src="../mocha-image.webp" class="card-img-top" alt="Mocha">
-                                <div class="card-body">
-                                    <h5 class="card-title">Mocha</h5>
-                                    <p class="card-text">$4.19</p>
-                                    <button class="btn btn-outline-primary w-100">View Details</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Go Back Button -->
-                <div class="mt-4 text-center" id="goBackButton" style="display: none;">
-                    <button class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">
-                        <i class="bi bi-arrow-left-circle"></i> Go Back
-                    </button>
-                </div>
-            </div>
+      <!-- Latte -->
+      <div class="item-sizing col-6 col-md-4">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalLatte">
+          <img src="../shopping-image.webp" class="card-img-top" alt="Latte" />
+          <div class="card-body text-center">
+            <h6 class="card-title">Latte</h6>
+            <p class="card-text">$4.49</p>
+          </div>
+          <div class="hover-sign">View Details</div>
         </div>
+      </div>
+
+      <!-- Cappuccino -->
+      <div class="item-sizing col-6 col-md-4">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalCappuccino">
+          <img src="../shopping-image.webp" class="card-img-top" alt="Cappuccino" />
+          <div class="card-body text-center">
+            <h6 class="card-title">Cappuccino</h6>
+            <p class="card-text">$4.99</p>
+          </div>
+          <div class="hover-sign">View Details</div>
+        </div>
+      </div>
+
+      <!-- Americano -->
+      <div class="item-sizing col-6 col-md-4">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalAmericano">
+          <img src="../shopping-image.webp" class="card-img-top" alt="Americano" />
+          <div class="card-body text-center">
+            <h6 class="card-title">Americano</h6>
+            <p class="card-text">$2.99</p>
+          </div>
+          <div class="hover-sign">View Details</div>
+        </div>
+      </div>
+
+      <!-- Mocha -->
+      <div class="item-sizing col-6 col-md-4">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalMocha">
+          <img src="../shopping-image.webp" class="card-img-top" alt="Mocha" />
+          <div class="card-body text-center">
+            <h6 class="card-title">Mocha</h6>
+            <p class="card-text">$5.99</p>
+          </div>
+          <div class="hover-sign">View Details</div>
+        </div>
+      </div>
+
+      <!-- Macchiato -->
+      <div class="item-sizing col-6 col-md-4">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalMacchiato">
+          <img src="../shopping-image.webp" class="card-img-top" alt="Macchiato" />
+          <div class="card-body text-center">
+            <h6 class="card-title">Macchiato</h6>
+            <p class="card-text">$4.29</p>
+          </div>
+          <div class="hover-sign">View Details</div>
+        </div>
+      </div>
+
+      <!-- Flat White -->
+      <div class="item-sizing col-6 col-md-4">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalFlatWhite">
+          <img src="../shopping-image.webp" class="card-img-top" alt="Flat White" />
+          <div class="card-body text-center">
+            <h6 class="card-title">Flat White</h6>
+            <p class="card-text">$4.79</p>
+          </div>
+          <div class="hover-sign">View Details</div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Right Side: Cart Listing -->
+  <div class="col-12 col-md-3">
+    <h4>Cart</h4>
+    <p>Items will appear here...</p>
+  </div>
+</div>
 </div>
 
 
 
-            
-            <!-- Modal for Latte -->
-            <div class="modal fade" id="modalLatte" tabindex="-1" aria-labelledby="modalLatteLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="modalLatteLabel">Latte</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6 text-center">
-                        <img src="../shopping-image.webp" class="img-fluid" alt="Latte">
-                        </div>
-                        <div class="col-md-6">
-                        <h4 class="fw-bold">Latte</h4>
-                        <p class="text-warning">⭐⭐⭐⭐⭐ (4.7/5) - 105 Reviews</p>
-                        <p><strong>Price:</strong> $4.49</p>
-                        <p>A smooth coffee with velvety milk texture and rich flavor.</p>
-                        <div class="d-flex align-items-center mb-3">
-                            <label for="quantityLatte" class="me-2"><strong>Quantity:</strong></label>
-                            <input type="number" id="quantityLatte" class="form-control" value="1" min="1" style="width: 70px;">
-                        </div>
-                        <button class="btn btn-success w-100">Buy Now</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
+<!-- Bootstrap Modals for Each Product -->
+<!-- Modal for Espresso -->
+<div
+  class="modal fade"
+  id="modalEspresso"
+  tabindex="-1"
+  aria-labelledby="modalEspressoLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEspressoLabel">Espresso</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <img
+              src="../shopping-image.webp"
+              class="img-fluid"
+              alt="Espresso"
+            />
+          </div>
+          <div class="col-md-6">
+            <h4 class="fw-bold">Espresso</h4>
+            <p class="text-warning">⭐⭐⭐⭐⭐ (4.9/5) - 120 Reviews</p>
+            <p><strong>Price:</strong> $3.99</p>
+            <p>A strong and rich coffee shot with intense flavor.</p>
+            <div class="d-flex align-items-center mb-3">
+              <label for="quantityEspresso" class="me-2"
+                ><strong>Quantity:</strong></label
+              >
+              <input
+                type="number"
+                id="quantityEspresso"
+                class="form-control"
+                value="1"
+                min="1"
+                style="width: 70px"
+              />
             </div>
-            
-            <!-- Modal for Cappuccino -->
-            <div class="modal fade" id="modalCappuccino" tabindex="-1" aria-labelledby="modalCappuccinoLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="modalCappuccinoLabel">Cappuccino</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6 text-center">
-                        <img src="../shopping-image.webp" class="img-fluid" alt="Cappuccino">
-                        </div>
-                        <div class="col-md-6">
-                        <h4 class="fw-bold">Cappuccino</h4>
-                        <p class="text-warning">⭐⭐⭐⭐⭐ (4.8/5) - 95 Reviews</p>
-                        <p><strong>Price:</strong> $4.99</p>
-                        <p>A creamy and frothy espresso drink with a sweet finish.</p>
-                        <div class="d-flex align-items-center mb-3">
-                            <label for="quantityCappuccino" class="me-2"><strong>Quantity:</strong></label>
-                            <input type="number" id="quantityCappuccino" class="form-control" value="1" min="1" style="width: 70px;">
-                        </div>
-                        <button class="btn btn-success w-100">Buy Now</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            
-            <!-- Modal for Americano -->
-            <div class="modal fade" id="modalAmericano" tabindex="-1" aria-labelledby="modalAmericanoLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="modalAmericanoLabel">Americano</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6 text-center">
-                        <img src="../shopping-image.webp" class="img-fluid" alt="Americano">
-                        </div>
-                        <div class="col-md-6">
-                        <h4 class="fw-bold">Americano</h4>
-                        <p class="text-warning">⭐⭐⭐⭐⭐ (4.6/5) - 85 Reviews</p>
-                        <p><strong>Price:</strong> $2.99</p>
-                        <p>A strong and bold espresso-based drink with a smooth finish.</p>
-                        <div class="d-flex align-items-center mb-3">
-                            <label for="quantityAmericano" class="me-2"><strong>Quantity:</strong></label>
-                            <input type="number" id="quantityAmericano" class="form-control" value="1" min="1" style="width: 70px;">
-                        </div>
-                        <button class="btn btn-success w-100">Buy Now</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            
-            <!-- Modal for Mocha -->
-            <div class="modal fade" id="modalMocha" tabindex="-1" aria-labelledby="modalMochaLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="modalMochaLabel">Mocha</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6 text-center">
-                        <img src="../shopping-image.webp" class="img-fluid" alt="Mocha">
-                        </div>
-                        <div class="col-md-6">
-                        <h4 class="fw-bold">Mocha</h4>
-                        <p class="text-warning">⭐⭐⭐⭐⭐ (4.9/5) - 110 Reviews</p>
-                        <p><strong>Price:</strong> $5.99</p>
-                        <p>A rich espresso drink with a combination of chocolate and milk.</p>
-                        <div class="d-flex align-items-center mb-3">
-                            <label for="quantityMocha" class="me-2"><strong>Quantity:</strong></label>
-                            <input type="number" id="quantityMocha" class="form-control" value="1" min="1" style="width: 70px;">
-                        </div>
-                        <button class="btn btn-success w-100">Buy Now</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            
-            <!-- Modal for Macchiato -->
-            <div class="modal fade" id="modalMacchiato" tabindex="-1" aria-labelledby="modalMacchiatoLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="modalMacchiatoLabel">Macchiato</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6 text-center">
-                        <img src="../shopping-image.webp" class="img-fluid" alt="Macchiato">
-                        </div>
-                        <div class="col-md-6">
-                        <h4 class="fw-bold">Macchiato</h4>
-                        <p class="text-warning">⭐⭐⭐⭐⭐ (4.8/5) - 130 Reviews</p>
-                        <p><strong>Price:</strong> $4.29</p>
-                        <p>A creamy espresso with a dash of frothy milk foam.</p>
-                        <div class="d-flex align-items-center mb-3">
-                            <label for="quantityMacchiato" class="me-2"><strong>Quantity:</strong></label>
-                            <input type="number" id="quantityMacchiato" class="form-control" value="1" min="1" style="width: 70px;">
-                        </div>
-                        <button class="btn btn-success w-100">Buy Now</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            
-            <!-- Modal for Flat White -->
-            <div class="modal fade" id="modalFlatWhite" tabindex="-1" aria-labelledby="modalFlatWhiteLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="modalFlatWhiteLabel">Flat White</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6 text-center">
-                        <img src="../shopping-image.webp" class="img-fluid" alt="Flat White">
-                        </div>
-                        <div class="col-md-6">
-                        <h4 class="fw-bold">Flat White</h4>
-                        <p class="text-warning">⭐⭐⭐⭐⭐ (4.7/5) - 110 Reviews</p>
-                        <p><strong>Price:</strong> $4.79</p>
-                        <p>A smooth and velvety espresso-based drink with a creamy texture.</p>
-                        <div class="d-flex align-items-center mb-3">
-                            <label for="quantityFlatWhite" class="me-2"><strong>Quantity:</strong></label>
-                            <input type="number" id="quantityFlatWhite" class="form-control" value="1" min="1" style="width: 70px;">
-                        </div>
-                        <button class="btn btn-success w-100">Buy Now</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
+            <button class="btn btn-success w-100">
+              Processed with Checkout
+            </button>
+          </div>
+        </div>
 
+        <!-- Similar Products Section -->
+        <div class="similar-products mt-4">
+          <h5 class="fw-bold">Similar Products</h5>
+          <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-4">
+              <div
+                class="card"
+                data-bs-toggle="modal"
+                data-bs-target="#modalCappuccino"
+              >
+                <img
+                  src="../cappuccino-image.webp"
+                  class="card-img-top"
+                  alt="Cappuccino"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cappuccino</h5>
+                  <p class="card-text">$4.49</p>
+                  <button class="btn btn-outline-primary w-100">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-4">
+              <div
+                class="card"
+                data-bs-toggle="modal"
+                data-bs-target="#modalLatte"
+              >
+                <img
+                  src="../latte-image.webp"
+                  class="card-img-top"
+                  alt="Latte"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Latte</h5>
+                  <p class="card-text">$3.89</p>
+                  <button class="btn btn-outline-primary w-100">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-4">
+              <div
+                class="card"
+                data-bs-toggle="modal"
+                data-bs-target="#modalMocha"
+              >
+                <img
+                  src="../mocha-image.webp"
+                  class="card-img-top"
+                  alt="Mocha"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Mocha</h5>
+                  <p class="card-text">$4.19</p>
+                  <button class="btn btn-outline-primary w-100">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Go Back Button -->
+        <div class="mt-4 text-center" id="goBackButton" style="display: none">
+          <button
+            class="btn btn-outline-secondary"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+            <i class="bi bi-arrow-left-circle"></i> Go Back
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Latte -->
+<div
+  class="modal fade"
+  id="modalLatte"
+  tabindex="-1"
+  aria-labelledby="modalLatteLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLatteLabel">Latte</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <img src="../shopping-image.webp" class="img-fluid" alt="Latte" />
+          </div>
+          <div class="col-md-6">
+            <h4 class="fw-bold">Latte</h4>
+            <p class="text-warning">⭐⭐⭐⭐⭐ (4.7/5) - 105 Reviews</p>
+            <p><strong>Price:</strong> $4.49</p>
+            <p>A smooth coffee with velvety milk texture and rich flavor.</p>
+            <div class="d-flex align-items-center mb-3">
+              <label for="quantityLatte" class="me-2"
+                ><strong>Quantity:</strong></label
+              >
+              <input
+                type="number"
+                id="quantityLatte"
+                class="form-control"
+                value="1"
+                min="1"
+                style="width: 70px"
+              />
+            </div>
+            <button class="btn btn-success w-100">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Cappuccino -->
+<div
+  class="modal fade"
+  id="modalCappuccino"
+  tabindex="-1"
+  aria-labelledby="modalCappuccinoLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalCappuccinoLabel">Cappuccino</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <img
+              src="../shopping-image.webp"
+              class="img-fluid"
+              alt="Cappuccino"
+            />
+          </div>
+          <div class="col-md-6">
+            <h4 class="fw-bold">Cappuccino</h4>
+            <p class="text-warning">⭐⭐⭐⭐⭐ (4.8/5) - 95 Reviews</p>
+            <p><strong>Price:</strong> $4.99</p>
+            <p>A creamy and frothy espresso drink with a sweet finish.</p>
+            <div class="d-flex align-items-center mb-3">
+              <label for="quantityCappuccino" class="me-2"
+                ><strong>Quantity:</strong></label
+              >
+              <input
+                type="number"
+                id="quantityCappuccino"
+                class="form-control"
+                value="1"
+                min="1"
+                style="width: 70px"
+              />
+            </div>
+            <button class="btn btn-success w-100">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Americano -->
+<div
+  class="modal fade"
+  id="modalAmericano"
+  tabindex="-1"
+  aria-labelledby="modalAmericanoLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAmericanoLabel">Americano</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <img
+              src="../shopping-image.webp"
+              class="img-fluid"
+              alt="Americano"
+            />
+          </div>
+          <div class="col-md-6">
+            <h4 class="fw-bold">Americano</h4>
+            <p class="text-warning">⭐⭐⭐⭐⭐ (4.6/5) - 85 Reviews</p>
+            <p><strong>Price:</strong> $2.99</p>
+            <p>A strong and bold espresso-based drink with a smooth finish.</p>
+            <div class="d-flex align-items-center mb-3">
+              <label for="quantityAmericano" class="me-2"
+                ><strong>Quantity:</strong></label
+              >
+              <input
+                type="number"
+                id="quantityAmericano"
+                class="form-control"
+                value="1"
+                min="1"
+                style="width: 70px"
+              />
+            </div>
+            <button class="btn btn-success w-100">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Mocha -->
+<div
+  class="modal fade"
+  id="modalMocha"
+  tabindex="-1"
+  aria-labelledby="modalMochaLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalMochaLabel">Mocha</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <img src="../shopping-image.webp" class="img-fluid" alt="Mocha" />
+          </div>
+          <div class="col-md-6">
+            <h4 class="fw-bold">Mocha</h4>
+            <p class="text-warning">⭐⭐⭐⭐⭐ (4.9/5) - 110 Reviews</p>
+            <p><strong>Price:</strong> $5.99</p>
+            <p>
+              A rich espresso drink with a combination of chocolate and milk.
+            </p>
+            <div class="d-flex align-items-center mb-3">
+              <label for="quantityMocha" class="me-2"
+                ><strong>Quantity:</strong></label
+              >
+              <input
+                type="number"
+                id="quantityMocha"
+                class="form-control"
+                value="1"
+                min="1"
+                style="width: 70px"
+              />
+            </div>
+            <button class="btn btn-success w-100">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Macchiato -->
+<div
+  class="modal fade"
+  id="modalMacchiato"
+  tabindex="-1"
+  aria-labelledby="modalMacchiatoLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalMacchiatoLabel">Macchiato</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <img
+              src="../shopping-image.webp"
+              class="img-fluid"
+              alt="Macchiato"
+            />
+          </div>
+          <div class="col-md-6">
+            <h4 class="fw-bold">Macchiato</h4>
+            <p class="text-warning">⭐⭐⭐⭐⭐ (4.8/5) - 130 Reviews</p>
+            <p><strong>Price:</strong> $4.29</p>
+            <p>A creamy espresso with a dash of frothy milk foam.</p>
+            <div class="d-flex align-items-center mb-3">
+              <label for="quantityMacchiato" class="me-2"
+                ><strong>Quantity:</strong></label
+              >
+              <input
+                type="number"
+                id="quantityMacchiato"
+                class="form-control"
+                value="1"
+                min="1"
+                style="width: 70px"
+              />
+            </div>
+            <button class="btn btn-success w-100">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Flat White -->
+<div
+  class="modal fade"
+  id="modalFlatWhite"
+  tabindex="-1"
+  aria-labelledby="modalFlatWhiteLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFlatWhiteLabel">Flat White</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <img
+              src="../shopping-image.webp"
+              class="img-fluid"
+              alt="Flat White"
+            />
+          </div>
+          <div class="col-md-6">
+            <h4 class="fw-bold">Flat White</h4>
+            <p class="text-warning">⭐⭐⭐⭐⭐ (4.7/5) - 110 Reviews</p>
+            <p><strong>Price:</strong> $4.79</p>
+            <p>
+              A smooth and velvety espresso-based drink with a creamy texture.
+            </p>
+            <div class="d-flex align-items-center mb-3">
+              <label for="quantityFlatWhite" class="me-2"
+                ><strong>Quantity:</strong></label
+              >
+              <input
+                type="number"
+                id="quantityFlatWhite"
+                class="form-control"
+                value="1"
+                min="1"
+                style="width: 70px"
+              />
+            </div>
+            <button class="btn btn-success w-100">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
