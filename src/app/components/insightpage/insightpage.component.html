@@ -1,0 +1,193 @@
+<app-navbar></app-navbar>
+
+<!-- if conf used below 7 total-->
+<!-- Espresso Details -->
+<div class="container mt-5">
+<h2>Selected Product</h2>
+
+<div *ngIf="productName">
+    <div class="row" *ngIf="productName === 'Espresso'">
+        <!-- Left Column: Product Image -->
+        <div class="col-md-4">
+            <img src="../shopping-image.jpg" class="img-fluid" alt="Espresso" />
+        </div>
+        <!-- Right Column: Product Description -->
+        <div class="col-md-6">
+            <h3>Espresso</h3>
+            <p><strong>Price:</strong> $4.49</p>
+            <p class="text-warning">⭐⭐⭐⭐⭐ (4.7/5) - 105 Reviews</p>
+            <hr>
+            <div class="d-flex align-items-center mb-3">
+                <label for="quantityLatte" class="me-2"><strong>Quantity:</strong></label>
+                <input type="number" id="quantityLatte" class="form-control" value="1" min="1" style="width: 70px" />
+            </div>
+            <button class="btn btn-primary my-4">Add to Cart</button>
+
+            <p>
+                Espresso is a strong, rich coffee made by forcing hot water through
+                finely-ground coffee beans.
+            </p>
+        </div>
+    </div>
+
+    <div class="row mt-5" *ngIf="productName === 'Latte'">
+        <div class="col-md-4">
+            <img src="../shopping-image.jpg" class="img-fluid" alt="Latte" />
+        </div>
+        <div class="col-md-6">
+            <h3>Latte</h3>
+            <p><strong>Price:</strong> $4.49</p>
+            <p class="text-warning">⭐⭐⭐⭐⭐ (4.7/5) - 105 Reviews</p>
+            <hr>
+            <div class="d-flex align-items-center mb-3">
+                <label for="quantityLatte" class="me-2"><strong>Quantity:</strong></label>
+                <input type="number" id="quantityLatte" class="form-control" value="1" min="1" style="width: 70px" />
+            </div>
+            <button class="btn btn-primary my-4">Add to Cart</button>
+
+            <p>Latte is a creamy coffee drink made with espresso and steamed milk.</p>
+        </div>
+    </div>
+
+    <div class="row mt-5" *ngIf="productName === 'Cappuccino'">
+        <div class="col-md-4">
+            <img src="../shopping-image.jpg" class="img-fluid" alt="Cappuccino" />
+        </div>
+        <div class="col-md-6">
+            <h3>Cappuccino</h3>
+            <p><strong>Price:</strong> $4.49</p>
+            <p class="text-warning">⭐⭐⭐⭐⭐ (4.7/5) - 105 Reviews</p>
+            <hr>
+            <div class="d-flex align-items-center mb-3">
+                <label for="quantityLatte" class="me-2"><strong>Quantity:</strong></label>
+                <input type="number" id="quantityLatte" class="form-control" value="1" min="1" style="width: 70px" />
+            </div>
+            <button class="btn btn-primary my-4">Add to Cart</button>
+
+            <p>
+                Cappuccino is a strong, rich coffee made by forcing hot water through
+                finely-ground coffee beans.
+            </p>
+        </div>
+    </div>
+
+    <div class="row mt-5" *ngIf="productName === 'Americano'">
+        <div class="col-md-4">
+            <img src="../shopping-image.jpg" class="img-fluid" alt="Americano" />
+        </div>
+        <div class="col-md-6">
+            <h3>Americano</h3>
+            <p><strong>Price:</strong> $4.49</p>
+            <p class="text-warning">⭐⭐⭐⭐⭐ (4.7/5) - 105 Reviews</p>
+            <hr>
+            <div class="d-flex align-items-center mb-3">
+                <label for="quantityLatte" class="me-2"><strong>Quantity:</strong></label>
+                <input type="number" id="quantityLatte" class="form-control" value="1" min="1" style="width: 70px" />
+            </div>
+            <button class="btn btn-primary my-4">Add to Cart</button>
+
+            <p>
+                Americano is a creamy coffee drink made with espresso and steamed milk.
+            </p>
+        </div>
+    </div>
+
+    <div class="row mt-5" *ngIf="productName === 'Mocha'">
+        <div class="col-md-4">
+            <img src="../shopping-image.jpg" class="img-fluid" alt="Mocha" />
+        </div>
+        <div class="col-md-6">
+            <h3>Mocha</h3>
+            <p><strong>Price:</strong> $4.49</p>
+            <p class="text-warning">⭐⭐⭐⭐⭐ (4.7/5) - 105 Reviews</p>
+            <hr>
+            <div class="d-flex align-items-center mb-3">
+                <label for="quantityLatte" class="me-2"><strong>Quantity:</strong></label>
+                <input type="number" id="quantityLatte" class="form-control" value="1" min="1" style="width: 70px" />
+            </div>
+            <button class="btn btn-primary my-4">Add to Cart</button>
+
+            <p>
+                Mocha is a strong, rich coffee made by forcing hot water through
+                finely-ground coffee beans.
+            </p>
+        </div>
+    </div>
+
+    <div class="row mt-5" *ngIf="productName === 'Macchiato'">
+        <div class="col-md-4">
+            <img src="../shopping-image.jpg" class="img-fluid" alt="Macchiato" />
+        </div>
+        <div class="col-md-6">
+            <h3>Macchiato</h3>
+            <p><strong>Price:</strong> $4.49</p>
+            <p class="text-warning">⭐⭐⭐⭐⭐ (4.7/5) - 105 Reviews</p>
+            <hr>
+            <div class="d-flex align-items-center mb-3">
+                <label for="quantityLatte" class="me-2"><strong>Quantity:</strong></label>
+                <input type="number" id="quantityLatte" class="form-control" value="1" min="1" style="width: 70px" />
+            </div>
+            <button class="btn btn-primary my-4">Add to Cart</button>
+            <p>
+                Macchiato is a creamy coffee drink made with espresso and steamed milk.
+            </p>
+        </div>
+    </div>
+
+    <div class="row mt-5" *ngIf="productName === 'Flat White'">
+        <div class="col-md-4">
+            <img src="../shopping-image.jpg" class="img-fluid" alt="Flat White" />
+        </div>
+        <div class="col-md-6">
+            <h3>Flat White</h3>
+            <p><strong>Price:</strong> $4.49</p>
+            <p class="text-warning">⭐⭐⭐⭐⭐ (4.7/5) - 105 Reviews</p>
+            <hr>
+            <div class="d-flex align-items-center mb-3">
+                <label for="quantityLatte" class="me-2"><strong>Quantity:</strong></label>
+                <input type="number" id="quantityLatte" class="form-control" value="1" min="1" style="width: 70px" />
+            </div>
+            <!-- button add to cart, added to cart page-->
+            <button class="btn btn-primary my-4">Add to Cart</button>
+
+            <p>
+                Flat White is a creamy coffee drink made with espresso and steamed milk.
+            </p>
+        </div>
+    </div>
+</div>
+<div *ngIf="!productName">
+    <p>No product selected.</p>
+</div>
+<hr>
+<!-- ================================================================================ -->
+<!-- user click normal appearance -->
+<div class="container my-5">
+
+<h2>More Similar Products</h2>
+<!-- all the product go here -->
+<div class="modal-body">
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <img src="../shopping-image.jpg" class="img-fluid" alt="Flat White" />
+      </div>
+      <div class="col-md-6">
+        <h4 class="fw-bold">Flat White</h4>
+        <p><strong>Price:</strong> $4.79</p>
+        <p class="text-warning">⭐⭐⭐⭐⭐ (4.7/5) - 110 Reviews</p>
+        
+        <p>
+          A smooth and velvety espresso-based drink with a creamy texture.
+        </p>
+        <div class="d-flex align-items-center mb-3">
+          <label for="quantityFlatWhite" class="me-2"><strong>Quantity:</strong></label>
+          <input type="number" id="quantityFlatWhite" class="form-control" value="1" min="1" style="width: 70px" />
+        </div>
+        <button class="btn btn-primary my-4">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+ </div>
+ </div>
+
+<app-footer min-width="100%"></app-footer>

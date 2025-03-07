@@ -1,3 +1,13 @@
+ul li a {
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Big Shoulders Stencil', cursive;
+}
+/* hover */
+ul li a:hover {
+    color: #EEC373;
+}
+
 .bg-body-tertiary {
     padding: 50px;
     height: 100px;
@@ -5,8 +15,22 @@
 
 .bg-body-tertiary {
     --bs-bg-opacity: 1;
-    background-color: #ffc107 !important;
+    background-color: #876445 !important;
 }
 
 /* bg- mobile */
 /* Default Navbar Style */
+
+
+/*  */
+.navbar-expand-lg .navbar-collapse {
+    background-color: #876445;
+    width: 100%;
+    font-size: 1.5rem;
+    color: black !important;
+    margin-left: 60px;
+}
+
+.navbar-nav .nav-item.custom-spacing {
+    margin-right: 20px; /* Adds space between each item */
+  }

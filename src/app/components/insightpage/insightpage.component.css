@@ -1,0 +1,17 @@
+p {
+    font-size: 20px;
+    color: white;
+}
+
+.btn {
+    background-color: #EEC373;
+    border: none;
+    color: #2a1803;
+    font-weight: bold;
+}
+
+/* hover */
+.btn:hover {
+    background-color: #2a1803;
+    color: #EEC373;
+}

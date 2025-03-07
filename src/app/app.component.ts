@@ -5,14 +5,14 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 import { ProductsComponent } from "./components/products/products.component";
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactComponent } from './components/contact/contact.component';
-
+import { CartComponent } from './components/cart/cart.component';
 // import { HomepageComponent } from "./components/homepage/homepage.component";
 // import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ CommonModule,RouterLink, RouterLinkActive, RouterOutlet, NavbarComponent, ProductsComponent, AboutUsComponent, ContactComponent ],
+  imports: [ CommonModule, RouterOutlet ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

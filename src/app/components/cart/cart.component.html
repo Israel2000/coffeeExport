@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+
+<div class="container my-5">
+  <h2 class="text-center mb-4">Shopping Cart</h2>
+
+  <div *ngIf="cartItem">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <img src="../shopping-image.png" class="cart-image" alt="Espresso">
+      </div>
+      <div class="col-md-8">
+        <h4>{{ cartItem.title }}</h4>
+        <p><strong>Price:</strong> ${{ cartItem.price }}</p>
+        <p><strong>Quantity:</strong> {{ cartItem.quantity }}</p>
+        <button class="btn btn-danger" (click)="removeItem()">Remove</button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!cartItem">
+    <p class="text-center">Your cart is empty.</p>
+  </div>
+
+  <div class="text-end mt-4" *ngIf="cartItem">
+    <button class="btn btn-success">Proceed to Checkout</button>
+  </div>
+</div>

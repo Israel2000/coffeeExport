@@ -1,0 +1,35 @@
+/* Footer Styling */
+footer {
+    background-color: #343a40;
+  }
+  
+  footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+  
+  footer p, footer a {
+    font-size: 1rem;
+  }
+  
+  footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: #f39c12; /* Hover effect color */
+  }
+  
+  footer .fab {
+    transition: color 0.3s ease;
+  }
+  
+  footer .fab:hover {
+    color: #f39c12; /* Hover effect color for social icons */
+  }
+  
+  footer .container {
+    max-width: 1200px;
+  }
+  

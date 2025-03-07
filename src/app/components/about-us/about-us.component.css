@@ -1,0 +1,90 @@
+/* Center the About page content both horizontally and vertically */
+.about-container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    background-color: #876445; /* Light background color */
+    padding: 20px;
+  }
+  
+  /* Flex container to hold article and images */
+  .about-content {
+    display: flex;
+    justify-content: space-between; /* Space between content and images */
+    align-items: flex-start; /* Align items to the top */
+    width: 100%;
+    max-width: 1200px;
+    background-color: #876445;
+    padding: 30px;
+    /* border-radius: 8px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  
+  /* Styling for the article section */
+  .article-section {
+    flex: 1;
+    padding-right: 30px; /* Space between text and image */
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+  
+  p {
+    font-size: 20px ;
+    /* margin-bottom: 15px; */
+    color: white;
+    /* line-height: 1.6; */
+  }
+  
+  /* Styling for the image section */
+  .image-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between images */
+  }
+  
+  .about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Optional: Add responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .article-section {
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .image-section {
+      display: block;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    h3 {
+      font-size: 1.25rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  

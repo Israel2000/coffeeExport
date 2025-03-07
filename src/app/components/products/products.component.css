@@ -46,4 +46,18 @@
   /*  */
   .item-sizing {
     width: 200px;
+    margin-left: 100px;
+    margin-bottom: 40px;
+  }
+
+  .hover-sign {
+    /* remove underline */
+    text-decoration: none;
+  }
+
+   .card-text   {
+    font-size: 20px !important;
+  }
+  .card-title {
+    font-size: 25px !important;
   }
