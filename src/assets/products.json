@@ -1,0 +1,67 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Espresso",
+        "price": 4.49,
+        "description": "Espresso is a strong, rich coffee made by forcing hot water through finely-ground coffee beans.",
+        "image": "../shopping-image.jpg",
+        "rating": 4.7,
+        "reviews": 105
+      },
+      {
+        "id": 2,
+        "name": "Latte",
+        "price": 4.49,
+        "description": "Latte is a creamy coffee drink made with espresso and steamed milk.",
+        "image": "../shopping-image.jpg",
+        "rating": 4.7,
+        "reviews": 105
+      },
+      {
+        "id": 3,
+        "name": "Cappuccino",
+        "price": 4.49,
+        "description": "Cappuccino is a strong, rich coffee made by forcing hot water through finely-ground coffee beans.",
+        "image": "../shopping-image.jpg",
+        "rating": 4.7,
+        "reviews": 105
+      },
+      {
+        "id": 4,
+        "name": "Americano",
+        "price": 4.49,
+        "description": "Americano is a creamy coffee drink made with espresso and steamed milk.",
+        "image": "../shopping-image.jpg",
+        "rating": 4.7,
+        "reviews": 105
+      },
+      {
+        "id": 5,
+        "name": "Mocha",
+        "price": 4.49,
+        "description": "Mocha is a strong, rich coffee made by forcing hot water through finely-ground coffee beans.",
+        "image": "../shopping-image.jpg",
+        "rating": 4.7,
+        "reviews": 105
+      },
+      {
+        "id": 6,
+        "name": "Macchiato",
+        "price": 4.49,
+        "description": "Macchiato is a creamy coffee drink made with espresso and steamed milk.",
+        "image": "../shopping-image.jpg",
+        "rating": 4.7,
+        "reviews": 105
+      },
+      {
+        "id": 7,
+        "name": "Flat White",
+        "price": 4.49,
+        "description": "Flat White is a creamy coffee drink made with espresso and steamed milk.",
+        "image": "../shopping-image.jpg",
+        "rating": 4.7,
+        "reviews": 105
+      }
+    ]
+  }

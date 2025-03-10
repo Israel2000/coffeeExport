@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { provideHttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-navbar',
@@ -9,11 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  // Boolean flag to track if the navbar is toggled
-  isNavbarToggled: boolean = false;
-
-  // Toggle the background color when the navbar toggler button is clicked
-  toggleNavbar(): void {
-    this.isNavbarToggled = !this.isNavbarToggled;
-  }
+ 
 }

@@ -1,102 +1,21 @@
 <app-navbar></app-navbar>
 
-<div class="container my-5"><!-- products items Start -->
-  <h2 class="text-center mb-4">Our Coffee Products</h2>
-  <hr />
+<div class="container mt-5">
+  <h2>Our Coffee Selection</h2>
   <div class="row">
-    <!-- Left: Product List -->
-    <div class="col-12 col-md-9">
-      <div class="row g-4 justify-content-center">
-        <!-- Espresso -->
-      <div class="item-sizing col-6 col-md-4 mb-4">
-        <div class="product-card">
-          <img src="../shopping-image.jpg" class="card-img-top" alt="Espresso" />
-          <a [routerLink]="['/insight', 'Espresso']" class="hover-sign">View Details</a>
-        </div>
-        <div class="card-body text-center mt-2">
-          <h6 class="card-title">Espresso</h6>
-          <p class="card-text">$3.99</p>
-        </div>
-      </div>
-
-      <!-- Latte -->
-      <div class="item-sizing col-6 col-md-4">
-        <div class="product-card">
-          <img src="../shopping-image.jpg" class="card-img-top" alt="Latte" />
-          <a [routerLink]="['/insight', 'Latte']" class="hover-sign">View Details</a>
-        </div>
-        <div class="card-body text-center mt-2">
-          <h6 class="card-title">Latte</h6>
-          <p class="card-text">$4.49</p>
-        </div>
-      </div>
-
-
-        <!-- Cappuccino -->
-        <div class="item-sizing col-6 col-md-4">
-          <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalCappuccino">
-            <img src="../shopping-image.jpg" class="card-img-top" alt="Cappuccino" />
-            <a [routerLink]="['/insight', 'Cappuccino']" class="hover-sign">View Details</a>
-          </div>
-          <div class="card-body text-center mt-2">
-            <h6 class="card-title">Cappuccino</h6>
-            <p class="card-text">$4.99</p>
-          </div>
-        </div>
-
-        <!-- Americano -->
-        <div class="item-sizing col-6 col-md-4">
-          <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalAmericano">
-            <img src="../shopping-image.jpg" class="card-img-top" alt="Americano" />
-            <a [routerLink]="['/insight', 'Americano']" class="hover-sign">View Details</a>
-          </div>
-          <div class="card-body text-center mt-2">
-            <h6 class="card-title">Americano</h6>
-            <p class="card-text">$2.99</p>
-          </div>
-        </div>
-
-        <!-- Mocha -->
-        <div class="item-sizing col-6 col-md-4">
-          <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalMocha">
-            <img src="../shopping-image.jpg" class="card-img-top" alt="Mocha" />
-            <a [routerLink]="['/insight', 'Mocha']" class="hover-sign">View Details</a>
-          </div>
-          <div class="card-body text-center mt-2">
-            <h6 class="card-title">Mocha</h6>
-            <p class="card-text">$5.99</p>
-          </div>
-        </div>
-
-        <!-- Macchiato -->
-        <div class="item-sizing col-6 col-md-4">
-          <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalMacchiato">
-            <img src="../shopping-image.jpg" class="card-img-top" alt="Macchiato" />
-            <a [routerLink]="['/insight', 'Macchiato']" class="hover-sign">View Details</a>
-          </div>
-          <div class="card-body text-center mt-2">
-            <h6 class="card-title">Macchiato</h6>
-            <p class="card-text">$4.29</p>
-          </div>
-        </div>
-
-        <!-- Flat White -->
-        <div class="item-sizing col-6 col-md-4">
-          <div class="product-card" data-bs-toggle="modal" data-bs-target="#modalFlatWhite">
-            <img src="../shopping-image.jpg" class="card-img-top" alt="Flat White" />
-            <a [routerLink]="['/insight', 'Flat White']" class="hover-sign">View Details</a>
-          </div>
-          <div class="card-body text-center mt-2">
-            <h6 class="card-title">Flat White</h6>
-            <p class="card-text">$4.79</p>
-          </div>
+    <div *ngFor="let product of products" class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img [src]="product.image" class="card-img-top" [alt]="product.name">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">\${{ product.price }}</p>
+          <p class="text-warning">⭐⭐⭐⭐⭐ ({{ product.rating }}/5)</p>
+          <p class="card-text">{{ product.description }}</p>
+          <button class="btn btn-primary" (click)="viewProduct(product.name)">View Details</button>
         </div>
       </div>
     </div>
   </div>
-</div> <!-- products items End -->
-
-
-
+</div>
 
 <app-footer></app-footer>

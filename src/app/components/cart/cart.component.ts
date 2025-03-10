@@ -1,15 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { CartService } from '../../services/cart.service';
+import { CartItem } from '../../models/product.model';
 
-interface CartItem {
-  name: string;
-  image: string;
-  price: number;
-  description: string;
-  quantity: number;
-}
 
 @Component({
   selector: 'app-cart',
@@ -18,20 +13,28 @@ interface CartItem {
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })
-export class CartComponent {
-  cartItem: any = null;
+export class CartComponent implements OnInit {
+  cartItems: CartItem[] = [];
+  total: number = 0;
+
+  constructor(private cartService: CartService) {}
 
   ngOnInit() {
-    const storedItem = localStorage.getItem('cartItem');
-    if (storedItem) {
-      this.cartItem = JSON.parse(storedItem);
-    }
+    this.cartService.cartItems$.subscribe(items => {
+      this.cartItems = items;
+      this.total = this.cartService.getTotal();
+    });
   }
 
-  removeItem() {
-    localStorage.removeItem('cartItem');
-    this.cartItem = null;
+  updateQuantity(productId: number, quantity: number) {
+    this.cartService.updateQuantity(productId, quantity);
   }
-  
 
+  removeItem(productId: number) {
+    this.cartService.removeFromCart(productId);
+  }
+
+  checkout() {
+    alert('Checkout functionality will be implemented soon!');
+  }
 }
