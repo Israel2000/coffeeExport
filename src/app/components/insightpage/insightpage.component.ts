@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
   imports: [CommonModule, NavbarComponent, FooterComponent, FormsModule],
   providers: [ProductService, CartService],
   templateUrl: './insightpage.component.html',
-  styleUrl: './insightpage.component.css'
+  styleUrls: ['./insightpage.component.css']
 })
 export class InsightpageComponent implements OnInit {
   product?: Product;
@@ -39,7 +39,7 @@ export class InsightpageComponent implements OnInit {
   }
 
   addToCart() {
-    if (this.product) {
+    if (this.product && this.quantity > 0) {
       this.cartService.addToCart(this.product, this.quantity);
       this.router.navigate(['/cart']);
     }

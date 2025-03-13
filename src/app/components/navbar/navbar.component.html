@@ -1,31 +1,39 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
+    <!-- Centered Logo -->
     <a class="navbar-brand" href="#">
-      <img src="../tituslogo.png" alt="Titus Coffee Logo" style="height: 99px;">
+      <img src="../tituslogo.png" alt="Titus Coffee Logo" style="height: 80px;">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+    <!-- Navbar Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCenter" 
+      aria-controls="navbarCenter" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item custom-spacing">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarCenter">
+      <!-- Centered Navigation Links -->
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Home</a>
         </li>
-        <li class="nav-item custom-spacing">
+        <li class="nav-item">
           <a class="nav-link" href="/products">Products</a>
         </li>
-        <li class="nav-item custom-spacing">
+        <li class="nav-item">
           <a class="nav-link" href="/about-us">About Us</a>
         </li>
-        <li class="nav-item custom-spacing">
+        <li class="nav-item">
           <a class="nav-link" href="/insight">Insight</a>
         </li>
-        <li class="nav-item custom-spacing">
+        <li class="nav-item">
           <a class="nav-link" href="/contact">Contact</a>
         </li>
       </ul>
-      <!-- Cart icon with "ms-auto" to push it to the far right -->
-      <ul class="navbar-nav ms-auto"> <!-- ms-auto aligns to the right -->
+      <!-- Cart aligned to the right -->
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a class="nav-link" href="/cart">
             <i class="fas fa-shopping-cart"></i> Cart

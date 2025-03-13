@@ -5,13 +5,12 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { CartService } from '../../services/cart.service';
 import { CartItem } from '../../models/product.model';
 
-
 @Component({
   selector: 'app-cart',
   standalone: true,
   imports: [NavbarComponent, CommonModule, FormsModule],
   templateUrl: './cart.component.html',
-  styleUrl: './cart.component.css'
+  styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
   cartItems: CartItem[] = [];
@@ -27,11 +26,17 @@ export class CartComponent implements OnInit {
   }
 
   updateQuantity(productId: number, quantity: number) {
-    this.cartService.updateQuantity(productId, quantity);
+    if (quantity < 1) {
+      this.removeItem(productId);
+    } else {
+      this.cartService.updateQuantity(productId, quantity);
+      this.total = this.cartService.getTotal();
+    }
   }
 
   removeItem(productId: number) {
     this.cartService.removeFromCart(productId);
+    this.total = this.cartService.getTotal();
   }
 
   checkout() {

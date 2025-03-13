@@ -11,7 +11,7 @@ export const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'cart', component: CartComponent },
-  // { path: 'insight', component: InsightpageComponent },
+  { path: 'insight', component: InsightpageComponent },
   { path: 'products', component: ProductsComponent },
   
   // { path: 'product/:name', component: InsightpageComponent },

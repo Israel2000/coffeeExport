@@ -1,78 +1,125 @@
+/* Parallax Section */
+.parallax {
+  position: relative;
+  background-image: url('/./simple2.jpg'); /* Update this URL to the correct path */
+  background-attachment: fixed; /* This creates the parallax effect */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+}
+
+/* Content to scroll over the parallax background */
+.content {
+  position: relative;
+  z-index: 2; /* Ensures the content stays above the background */
+  text-align: center;
+  color: white;
+  padding: 200px 20px;
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+/* Additional Sections for scrolling */
+.section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
 /* Hero Section */
 .hero-section {
-    /* background: url('path/to/hero-image.jpg') no-repeat center center; */
-    background-size: cover;
-    height: 100vh;
-    color: white;
-  }
-  
-  .hero-section .display-4 {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-  
-  .hero-section .lead {
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero-section .btn-warning {
-    background-color: #f39c12;
-    border-color: #f39c12;
-  }
-  
-  /* Section Styling */
-  h3 {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  
-  .card {
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
-  
-  .card-body {
-    padding: 1.5rem;
-  }
-  
-  .card-body .card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-  
-  .card-body .card-text {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-  
-  .card-body .btn-warning {
-    background-color: #f39c12;
-    border-color: #f39c12;
-  }
-  
-  /* Call to Action */
-  .text-center .display-4 {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-  
-  .text-center .lead {
-    font-size: 1.5rem;
-  }
-  
-  .bg-light {
-    background-color: #f8f9fa;
-  }
-  
-  .bg-light .btn-warning {
-    background-color: #f39c12;
-    border-color: #f39c12;
-  }
-  
+  /* background: url('path/to/hero-image.jpg') no-repeat center center; */
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
+
+.hero-section .display-4 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-section .lead {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.hero-section .btn-warning {
+  background-color: #f39c12;
+  border-color: #f39c12;
+}
+
+/* Section Styling */
+h3, i {
+  font-size: 2rem;
+  font-weight: bold; 
+   color: rgb(36 21 0) !important;
+
+}
+
+p {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: rgb(36 21 0) !important;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(36 21 0) !important;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-body .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-body .card-text {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.card-body .btn-warning {
+  background-color: #f39c12;
+  border-color: #f39c12;
+}
+
+/* Call to Action */
+.text-center .display-4 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.text-center .lead {
+  font-size: 1.5rem;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+.bg-light .btn-warning {
+  background-color: #f39c12;
+  border-color: #f39c12;
+}
+
+.card-img-top {
+  height: 300px;
+  width: 200px;
+  /* image center */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
