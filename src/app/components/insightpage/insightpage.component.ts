@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-insightpage',
   standalone: true,
   imports: [CommonModule, NavbarComponent, FooterComponent, FormsModule],
-  providers: [ProductService, CartService],
+  providers: [ProductService],
   templateUrl: './insightpage.component.html',
   styleUrl: './insightpage.component.css'
 })

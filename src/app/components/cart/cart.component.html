@@ -38,8 +38,15 @@
       </table>
     </div>
     <div class="text-end mt-4">
-      <h4>Total: \${{ total | number:'1.2-2' }}</h4>
-      <button class="btn btn-success" (click)="checkout()">Proceed to Checkout</button>
+      <h4> Total: \${{ total | number:'1.2-2' }}</h4>
+      <!-- <button class="btn btn-success" (click)="checkout()">Proceed to Checkout</button> -->
+      <button (click)="pay(total)" class="btn btn-success">Pay ${{ total | number:'1.2-2' }}</button>
+      <div class="container mt-5">
+        <h2>Stripe Checkout</h2>
+        <p class="mt-0">
+            Try it out using the test card number <b>4242 4242 4242 4242</b>, a random three-digit CVC number, any expiration date in the future, and a random five-digit U.S. ZIP code.
+        </p>
+      </div>
     </div>
   </div>
   <ng-template #emptyCart>
