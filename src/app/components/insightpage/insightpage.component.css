@@ -1,8 +1,14 @@
 p {
     font-size: 20px;
-    color: white;
+    color: #5c3f0d !important;
 }
 
+strong {
+    color: #5c3f0d !important;
+}
+h3 {
+    color: #5c3f0d !important;
+}
 .btn {
     background-color: #EEC373;
     border: none;

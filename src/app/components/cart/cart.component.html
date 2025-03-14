@@ -22,14 +22,14 @@
                 {{ item.product.name }}
               </div>
             </td>
-            <td>\${{ item.product.price }}</td>
+            <td>${{ item.product.price }}</td>
             <td>
               <input type="number" class="form-control" style="width: 70px"
                      [(ngModel)]="item.quantity" 
                      (ngModelChange)="updateQuantity(item.product.id, $event)"
                      min="1">
             </td>
-            <td>\${{ item.product.price * item.quantity | number:'1.2-2' }}</td>
+            <td>${{ item.product.price * item.quantity | number:'1.2-2' }}</td>
             <td>
               <button class="btn btn-danger btn-sm" (click)="removeItem(item.product.id)">Remove</button>
             </td>
@@ -38,7 +38,7 @@
       </table>
     </div>
     <div class="text-end mt-4">
-      <h4>Total: \${{ total | number:'1.2-2' }}</h4>
+      <h4>Total: ${{ total | number:'1.2-2' }}</h4>
       <button class="btn btn-success" (click)="checkout()">Proceed to Checkout</button>
     </div>
   </div>

@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center; /* Horizontally center */
     align-items: center; /* Vertically center */
-    background-color: #876445; /* Light background color */
     padding: 20px;
   }
   
@@ -14,7 +13,6 @@
     align-items: flex-start; /* Align items to the top */
     width: 100%;
     max-width: 1200px;
-    background-color: #876445;
     padding: 30px;
     /* border-radius: 8px; */
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
@@ -35,6 +33,7 @@
   h3 {
     font-size: 1.5rem;
     margin-top: 20px;
+    color: #5c3f0d !important;
   }
   
   p {

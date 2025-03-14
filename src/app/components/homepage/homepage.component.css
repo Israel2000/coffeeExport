@@ -128,3 +128,14 @@ h2, h1 {
   margin-right: auto;
   margin-top: 37px;
 }
+
+div.card-body.text-center {
+  background-color: rgb(36 21 0) !important;
+  color: white;
+  /* bottom corners border radius 10px */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+p.card-text {
+  color: white !important;
+}

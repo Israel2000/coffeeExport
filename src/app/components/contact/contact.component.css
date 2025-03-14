@@ -22,7 +22,7 @@
   /* Styling for the Contact Us Header */
   h2, h3 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   /* Styling for the address text */
@@ -30,6 +30,10 @@
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: #EEC373;
+  }
+
+  label {
+    color: #5c3f0d !important;
   }
   
   /* Button styling */
