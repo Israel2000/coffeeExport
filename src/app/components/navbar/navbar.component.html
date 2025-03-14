@@ -1,45 +1,29 @@
- <!-- Navbar -->
- <nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <!-- Centered Logo -->
-    <a class="navbar-brand" href="#">
-      <img src="../tituslogo.png" alt="Titus Coffee Logo" style="height: 80px;">
-    </a>
-
-    <!-- Navbar Toggler -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCenter" 
-      aria-controls="navbarCenter" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <!-- Navbar Links -->
-    <div class="collapse navbar-collapse" id="navbarCenter">
-      <!-- Centered Navigation Links -->
-      <ul class="navbar-nav mx-auto">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" href="/">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/products">Products</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about-us">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/insight">Insight</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
-        </li>
-      </ul>
-      <!-- Cart aligned to the right -->
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/cart">
-            <i class="fas fa-shopping-cart"></i> Cart
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
       </ul>
+       <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Cart</a>
+        </li>
     </div>
   </div>
 </nav>
