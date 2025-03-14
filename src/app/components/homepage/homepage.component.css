@@ -24,7 +24,7 @@
 .section {
   padding: 50px 20px;
   text-align: center;
-  background-color: #f4f4f4;
+  background-color: #fddea7;
 }
 
 /* Hero Section */
@@ -58,13 +58,18 @@ h3, i {
 
 }
 
+.py-5 {
+  padding-top: 1rem !important;
+  padding-bottom: 3rem !important;
+}
+
 p {
   font-size: 1.25rem;
   margin-bottom: 15px;
   color: rgb(36 21 0) !important;
 }
 
-h2 {
+h2, h1 {
   font-size: 2.5rem;
   font-weight: bold;
   color: rgb(36 21 0) !important;
@@ -121,5 +126,5 @@ h2 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-
+  margin-top: 37px;
 }

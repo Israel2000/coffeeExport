@@ -4,4 +4,11 @@ body {
     /* background-color: #876445 !important; */
     color: white !important;
     font-family: 'Big Shoulders Stencil', cursive !important;
+    color: #5c3f0d;
+    background-color: #fddea7!important;
+}
+
+h2, p {
+    color: #5c3f0d !important;
+    font-family: 'Big Shoulders Stencil', cursive !important;
 }
