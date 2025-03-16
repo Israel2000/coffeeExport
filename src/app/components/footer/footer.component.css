@@ -1,36 +1,70 @@
-/* Footer Styling */
-footer {
-    background-color: rgb(36 21 0) !important;
-    padding-top: 10px;
-  }
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+div.card-body {
+background-color: #cf9633 !important;
+/* bottom border radius */
+border-bottom-left-radius: 9px !important;
+border-bottom-right-radius: 9px !important;
+}
+
+.h-100 {
   
-  footer h5 {
-    font-size: 1.25rem;
-    margin-bottom: 15px;
-  }
-  
-  footer p, footer a {
-    font-size: 1.5rem;
-  }
-  
-  footer a {
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  footer a:hover {
-    color: #f39c12; /* Hover effect color */
-  }
-  
-  footer .fab {
-    transition: color 0.3s ease;
-  }
-  
-  footer .fab:hover {
-    color: #f39c12; /* Hover effect color for social icons */
-  }
-  
-  footer .container {
-    max-width: 1200px;
-  }
-  
+  margin: 0 50px 50px 0;
+  /* padding-bottom: 50px; */
+}
+
+.mb-4 {
+  margin-bottom: 3.5rem !important;
+}
+
+/*  */
+.product-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.hover-sign {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.product-card:hover .hover-sign {
+  opacity: 1;
+}
+
+/*  */
+.item-sizing {
+  width: 200px;
+  margin-left: 100px;
+  margin-bottom: 40px;
+}
+
+.hover-sign {
+  /* remove underline */
+  text-decoration: none;
+}
+
+ .card-text   {
+  font-size: 20px !important;
+}
+.card-title {
+  font-size: 25px !important;
+}

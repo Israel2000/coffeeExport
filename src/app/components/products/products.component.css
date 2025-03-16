@@ -1,63 +1,83 @@
 .row {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+div.card-body {
+background-color: #cf9633 !important;
+/* bottom border radius */
+border-bottom-left-radius: 9px !important;
+border-bottom-right-radius: 9px !important;
 }
 
 .h-100 {
-    
-    margin: 0 50px 50px 0;
-    /* padding-bottom: 50px; */
+  
+  margin: 0 50px 50px 0;
+  /* padding-bottom: 50px; */
 }
 
 .mb-4 {
-    margin-bottom: 3.5rem !important;
+  margin-bottom: 3.5rem !important;
+  
+}
+
+.btn-primary {
+  background-color: #EEC373;
+  border: none;
+  color: #2a1803;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #cf9633;
+  color: #2a1803;
 }
 
 /*  */
 .product-card {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .product-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .hover-sign {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 5px;
-    font-size: 14px;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  .product-card:hover .hover-sign {
-    opacity: 1;
-  }
-  
-  /*  */
-  .item-sizing {
-    width: 200px;
-    margin-left: 100px;
-    margin-bottom: 40px;
-  }
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 
-  .hover-sign {
-    /* remove underline */
-    text-decoration: none;
-  }
+.product-card:hover {
+  transform: scale(1.05);
+}
 
-   .card-text   {
-    font-size: 20px !important;
-  }
-  .card-title {
-    font-size: 25px !important;
-  }
+.hover-sign {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.product-card:hover .hover-sign {
+  opacity: 1;
+}
+
+/*  */
+.item-sizing {
+  width: 200px;
+  margin-left: 100px;
+  margin-bottom: 40px;
+}
+
+.hover-sign {
+  /* remove underline */
+  text-decoration: none;
+}
+
+ .card-text   {
+  font-size: 20px !important;
+}
+.card-title {
+  font-size: 25px !important;
+}

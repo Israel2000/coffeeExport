@@ -11,7 +11,7 @@
             <th>Price</th>
             <th>Quantity</th>
             <th>Total</th>
-            <th>Action</th>
+            <th>Remove</th>
           </tr>
         </thead>
         <tbody>
@@ -22,24 +22,37 @@
                 {{ item.product.name }}
               </div>
             </td>
-            <td>\${{ item.product.price }}</td>
+            <td>${{ item.product.price }}</td>
             <td>
               <input type="number" class="form-control" style="width: 70px"
                      [(ngModel)]="item.quantity" 
                      (ngModelChange)="updateQuantity(item.product.id, $event)"
                      min="1">
             </td>
-            <td>\${{ item.product.price * item.quantity | number:'1.2-2' }}</td>
+            <td>${{ item.product.price * item.quantity | number:'1.2-2' }}</td>
             <td>
-              <button class="btn btn-danger btn-sm" (click)="removeItem(item.product.id)">Remove</button>
+              <i class="fas fa-trash text-danger" style="font-size: 16px; cursor: pointer;" (click)="removeItem(item.product.id)"></i>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="text-end mt-4">
-      <h4>Total: \${{ total | number:'1.2-2' }}</h4>
-      <button class="btn btn-success" (click)="checkout()">Proceed to Checkout</button>
+      <h4> Total: ${{ total | number:'1.2-2' }}</h4> 
+      <div class="d-flex justify-content-end">
+        <button (click)="pay(total)" class="btn btn-success d-flex align-items-center px-4">
+          Pay with  <i class="fab fa-stripe me-2" style="font-size: 34px; margin-left: 10px"></i>
+          <span>${{ total | number:'1.2-2' }}</span>
+        </button>
+      </div>
+      
+      
+            <div class="container mt-5">
+        <h2>Stripe Checkout</h2>
+        <p class="mt-0">
+            Try it out using the test card number <b>4242 4242 4242 4242</b>, a random three-digit CVC number, any expiration date in the future, and a random five-digit U.S. ZIP code.
+        </p>
+      </div>
     </div>
   </div>
   <ng-template #emptyCart>

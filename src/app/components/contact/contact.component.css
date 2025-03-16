@@ -1,48 +1,52 @@
 /* Styling for the container */
 .container {
-    max-width: 1200px;
-    margin-top: 50px;
+  max-width: 1200px;
+  margin-top: 50px;
+}
+
+/* Add some space between the sections */
+.row {
+  margin-top: 20px;
+}
+
+/* Make the form input fields and button look nicer */
+.form-label {
+  font-weight: bold;
+}
+
+/* Optional: Add some extra space for the address section */
+.col-md-6 {
+  padding: 20px;
+}
+
+/* Styling for the Contact Us Header */
+h2, h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Styling for the address text */
+p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #EEC373;
+}
+
+label {
+  color: #5c3f0d !important;
+}
+
+/* Button styling */
+button {
+  margin-top: 10px;
+  background-color: #EEC373;
+  border: none;
+  color: #2a1803;
+  font-weight: bold;
+}
+
+/* hover */
+  button:hover {
+      background-color: #2a1803;
+      color: #EEC373;
   }
-  
-  /* Add some space between the sections */
-  .row {
-    margin-top: 20px;
-  }
-  
-  /* Make the form input fields and button look nicer */
-  .form-label {
-    font-weight: bold;
-  }
-  
-  /* Optional: Add some extra space for the address section */
-  .col-md-6 {
-    padding: 20px;
-  }
-  
-  /* Styling for the Contact Us Header */
-  h2, h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  /* Styling for the address text */
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #EEC373;
-  }
-  
-  /* Button styling */
-  button {
-    margin-top: 10px;
-    background-color: #EEC373;
-    border: none;
-    color: #2a1803;
-    font-weight: bold;
-  }
-  
-  /* hover */
-    button:hover {
-        background-color: #2a1803;
-        color: #EEC373;
-    }

@@ -1,3 +1,6 @@
+.bg-primary {
+    background-color: #007bff;  /* Or your desired background color */
+  }
 /* Navbar Links */
 ul li a {
     color: #5c3f0d;
@@ -10,60 +13,30 @@ ul li a {
 ul li a:hover {
     color: #EEC373;
 }
+nav {
+    background-color: #fddea7!important;
 
+}
 /* Navbar Centering */
-#navbarCenter {
+.navbar-nav {
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Center the Main Links */
-#navbarCenter ul:first-child {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-}
 
-/* Keep Cart Aligned to Right */
-#navbarCenter ul:last-child {
-    margin-left: auto;
-}
+.navbar-nav .nav-item.custom-spacing {
+    margin-right: 20px; /* Adds space between each item */
+  }
 
-/* Mobile Styling */
-@media (max-width: 991px) {  /* Bootstrap lg breakpoint */
-    #navbarCenter {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Remove margin-top for mobile */
-    .navbar-brand {
-        margin-top: 0 !important;
-    }
-
-    /* Center links properly */
-    #navbarCenter ul {
-        width: 100%;
-        text-align: center;
-        padding: 0;
-    }
-
-    /* Reduce padding on smaller screens */
-    ul li a {
-        font-size: 1.5rem;
-        padding-left: 20px;
-    }
-
-    /* Align toggler next to logo */
-    .navbar-toggler {
-        order: 2;
-    }
-
-    /* Ensure the cart is at the bottom in mobile view */
-    #navbarCenter ul:last-child {
-        margin-top: 20px;
-        margin-left: 0;
-        justify-content: center;
-    }
+#cartItems_number {
+    display: inline;
+    margin: 0;
+    padding: 5px;
+    background-color: red;
+    /* border-radius: 50% !important; */
+    color: white !important;
+    font-size: 0.8rem;
+    text-align: center;
 }
