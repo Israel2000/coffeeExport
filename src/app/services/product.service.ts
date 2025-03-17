@@ -48,7 +48,7 @@ export class ProductService {
       name: "Mocha",
       price: 4.49,
       description: "Mocha is a strong, rich coffee made by forcing hot water through finely-ground coffee beans.",
-      image: "https://images.unsplash.com/photo-1578636113470-cd4dc19c90dd?w=400",
+      image: "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=400",
       rating: 4.7,
       reviews: 105
     },
