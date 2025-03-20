@@ -3,18 +3,20 @@
   }
 /* Navbar Links */
 ul li a {
-    color: #5c3f0d;
-    font-size: 2rem;
-    font-family: 'Big Shoulders Stencil', cursive;
+    color: #010101;
+    font-size: 1.5rem;
+    /* font-family: 'Big Shoulders Stencil', cursive; */
+    font-family: "Montserrat", sans-serif;
+
     padding-left: 60px; /* Space */
 }
 
 /* Hover Effect */
 ul li a:hover {
-    color: #EEC373;
+    color: #937233;
 }
 nav {
-    background-color: #fddea7!important;
+    background-color: #ededed !important;
 
 }
 /* Navbar Centering */

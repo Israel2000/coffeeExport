@@ -1,19 +1,37 @@
-.cart-image {
+/* .cart-image {
     width: 100%;
     max-width: 300px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
-  
-  .quantity-input {
+   */
+  /* .quantity-input {
     width: 70px;
     text-align: center;
-  }
+  } */
   
   button {
     min-width: 150px;
   }
   
-  h4 {
+  h4, th, td, input {
     color: #5c3f0d !important;
   }
+
+  /* .container {
+    max-width: 1200px;
+    margin: 20px auto;
+  } */
+  
+  .cart-items {
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    margin-top: 20px;
+  }
+  
+  .collapsible {
+    box-shadow: none;
+  }
+  

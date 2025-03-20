@@ -5,11 +5,13 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { CartService } from '../../services/cart.service';
 import { CartItem } from '../../models/product.model';
 import { Router } from '@angular/router';
+import { FooterComponent } from "../footer/footer.component";
+import { CheckoutComponent } from '../checkout/checkout.component';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [NavbarComponent, CommonModule, FormsModule],
+  imports: [NavbarComponent, CommonModule, FormsModule, FooterComponent],
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })

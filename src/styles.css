@@ -1,14 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     /* background-color: #876445 !important; */
-    color: white !important;
-    font-family: 'Big Shoulders Stencil', cursive !important;
-    color: #5c3f0d;
-    background-color: #fddea7!important;
+    color: white!important;
+    font-family: "Montserrat", sans-serif;
+    color: #010101 !important;
+    background-color: #ededed !important;
 }
 
 h2, p {
-    color: #5c3f0d !important;
-    font-family: 'Big Shoulders Stencil', cursive !important;
+    color: #010101 !important;
+    font-family: "Montserrat", sans-serif;
 }

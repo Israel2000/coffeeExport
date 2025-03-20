@@ -52,9 +52,9 @@
 
 /* Section Styling */
 h3, i {
-  font-size: 2rem;
+  font-size: 2rem!important;
   font-weight: bold; 
-   color: rgb(36 21 0) !important;
+  color: white !important;
 
 }
 
@@ -70,9 +70,9 @@ p {
 }
 
 h2, h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: bold;
-  color: rgb(36 21 0) !important;
+  color: rgb(0, 0, 0)!important;
 }
 
 .card {

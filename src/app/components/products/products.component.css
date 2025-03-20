@@ -4,14 +4,14 @@
 }
 
 div.card-body {
-background-color: #cf9633 !important;
+background-color: #fff1da !important;
 /* bottom border radius */
 border-bottom-left-radius: 9px !important;
 border-bottom-right-radius: 9px !important;
 }
 
 div.card-body {
-  background-color: #cf9633 !important;
+  background-color: #fffffe !important;
   /* bottom border radius */
   border-bottom-left-radius: 9px !important;
   border-bottom-right-radius: 9px !important;
@@ -29,7 +29,7 @@ div.card-body {
 }
 
 .btn-primary {
-  background-color: #EEC373;
+  background-color: #ffeecf;
   border: none;
   color: #2a1803;
   font-weight: bold;
