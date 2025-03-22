@@ -24,7 +24,7 @@
 .section {
   padding: 50px 20px;
   text-align: center;
-  background-color: #fddea7;
+  background-color: #ffffffd0;
 }
 
 /* Hero Section */
@@ -54,8 +54,11 @@
 h3, i {
   font-size: 2rem!important;
   font-weight: bold; 
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
 
+}
+p.text-white{
+  color: white !important;
 }
 
 .py-5 {
@@ -138,4 +141,36 @@ div.card-body.text-center {
 }
 p.card-text {
   color: white !important;
+}
+
+.about-products-section .position-relative {
+  overflow: hidden;
+}
+
+.about-products-section img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.overlay-text h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.overlay-text p {
+  font-size: 14px;
+  margin: 0;
 }
