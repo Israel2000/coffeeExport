@@ -74,11 +74,12 @@ export class ProductService {
 
   constructor() {}
 
-  getProducts(): Observable<{ products: Product[] }> {
-    return of({ products: this.products });
+  getProducts(): Observable<Product[]> {
+    return of(this.products);
   }
 
   getProductByName(name: string): Observable<Product | undefined> {
-    return of(this.products.find(p => p.name === name));
+    const product = this.products.find(p => p.name.toLowerCase() === name.toLowerCase());
+    return of(product);
   }
 }

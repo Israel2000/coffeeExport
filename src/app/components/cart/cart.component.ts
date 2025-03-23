@@ -1,36 +1,47 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { CartService } from '../../services/cart.service';
 import { CartItem } from '../../models/product.model';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { FooterComponent } from "../footer/footer.component";
-import { CheckoutComponent } from '../checkout/checkout.component';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [NavbarComponent, CommonModule, FormsModule, FooterComponent],
+  imports: [NavbarComponent, CommonModule, FormsModule, FooterComponent, RouterModule],
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent implements OnInit {
+export class CartComponent implements OnInit, OnDestroy {
   cartItems: CartItem[] = [];
   total: number = 0;
+  private cartSubscription!: Subscription;
+  private handler: any = null;
 
   constructor(
     private cartService: CartService,
     private router: Router
   ) {}
-  handler:any = null;
 
   ngOnInit() {
-    this.cartService.cartItems$.subscribe(items => {
+    // Subscribe to cart items and calculate total
+    this.cartSubscription = this.cartService.cartItems$.subscribe(items => {
       this.cartItems = items;
       this.total = this.cartService.getTotal();
     });
+
+    // Load Stripe checkout
     this.loadStripe();
+  }
+
+  ngOnDestroy() {
+    // Prevent memory leaks by unsubscribing
+    if (this.cartSubscription) {
+      this.cartSubscription.unsubscribe();
+    }
   }
 
   updateQuantity(productId: number, quantity: number) {
@@ -51,46 +62,46 @@ export class CartComponent implements OnInit {
     alert('Checkout functionality will be implemented soon!');
   }
 
-  pay(amount: any) {    
-    var handler = (<any>window).StripeCheckout.configure({
-      key: 'pk_test_51HxRkiCumzEESdU2Z1FzfCVAJyiVHyHifo0GeCMAyzHPFme6v6ahYeYbQPpD9BvXbAacO2yFQ8ETlKjo4pkHSHSh00qKzqUVK9',
-      locale: 'auto',
-      token: (token: any) => { 
-        console.log(token);
-        localStorage.removeItem('cart');
-        this.router.navigate(['/products']);
-        this.cartService.updateCartCount();
-      }
-    });
-  
-    handler.open({
+  pay(amount: number) {    
+    if (!this.handler) {
+      console.error('Stripe handler is not initialized.');
+      return;
+    }
+
+    this.handler.open({
       name: 'Demo Site',
-      description: '2 widgets',
-      amount: amount * 100
+      description: 'Purchase Items',
+      amount: amount * 100,
+      token: (token: any) => { 
+        console.log('Payment successful:', token);
+        
+        // Move clearing cart only after payment success
+        localStorage.removeItem('cart');
+        this.cartService.clearCart();
+        
+        // Navigate to products page
+        this.router.navigate(['/products']);
+
+        // Notify user
+        alert('Payment Successful!');
+      }
     });
   }
   
   loadStripe() {     
-    if(!window.document.getElementById('stripe-script')) {
-      var s = window.document.createElement("script");
-      s.id = "stripe-script";
-      s.type = "text/javascript";
-      s.src = "https://checkout.stripe.com/checkout.js";
-      s.onload = () => {
+    if (!window.document.getElementById('stripe-script')) {
+      const script = window.document.createElement("script");
+      script.id = "stripe-script";
+      script.type = "text/javascript";
+      script.src = "https://checkout.stripe.com/checkout.js";
+      script.onload = () => {
         this.handler = (<any>window).StripeCheckout.configure({
-          // plz israel use here your own stripe test key
           key: 'pk_test_51HxRkiCumzEESdU2Z1FzfCVAJyiVHyHifo0GeCMAyzHPFme6v6ahYeYbQPpD9BvXbAacO2yFQ8ETlKjo4pkHSHSh00qKzqUVK9',
-          locale: 'auto',
-          token: function (token: any) {
-            // You can access the token ID with `token.id`.
-            // Get the token ID to your server-side code for use.
-            console.log(token)
-            alert('Payment Success!!');
-          }
+          locale: 'auto'
         });
-      }
+      };
        
-      window.document.body.appendChild(s);
+      window.document.body.appendChild(script);
     }
   }
 }

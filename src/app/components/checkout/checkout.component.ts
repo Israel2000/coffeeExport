@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from "../navbar/navbar.component";
+// import { NavbarComponent } from "../navbar/navbar.component";
 
 @Component({
   selector: 'app-checkout',
-  imports: [NavbarComponent],
+  imports: [],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.css'
 })

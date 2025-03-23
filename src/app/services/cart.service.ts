@@ -16,20 +16,18 @@ export class CartService {
     return storedCart ? JSON.parse(storedCart) : [];
   }
 
-  private saveCartToLocalStorage(cart: CartItem[]) {
+  private saveAndEmit(cart: CartItem[]) {
     localStorage.setItem('cart', JSON.stringify(cart));
+    this.cartItems.next(cart);
   }
 
-  getCartCount(): any {
-    const storedCart = localStorage.getItem('cart');
-    return storedCart ? JSON.parse(storedCart).length : 0;
+  getCartCount(): number {
+    return this.cartItems.getValue().length;
   }
 
   updateCartCount() {
-    const updatedCart = this.loadCartFromLocalStorage(); 
-    this.cartItems.next(updatedCart); 
+    this.cartItems.next(this.loadCartFromLocalStorage());
   }
-  
 
   addToCart(product: Product, quantity: number = 1) {
     const currentItems = this.cartItems.getValue();
@@ -41,30 +39,29 @@ export class CartService {
       currentItems.push({ product, quantity });
     }
 
-    this.cartItems.next([...currentItems]);
-    this.saveCartToLocalStorage(currentItems); 
+    this.saveAndEmit(currentItems);
   }
 
   removeFromCart(productId: number) {
     const updatedItems = this.cartItems.getValue().filter(item => item.product.id !== productId);
-    this.cartItems.next(updatedItems);
-    this.saveCartToLocalStorage(updatedItems);
-    this.updateCartCount();
+    this.saveAndEmit(updatedItems);
   }
-  
+
   updateQuantity(productId: number, quantity: number) {
-    const updatedItems = this.cartItems.getValue().map(item => {
-      if (item.product.id === productId) {
-        return { ...item, quantity };
-      }
-      return item;
-    });
-    this.cartItems.next(updatedItems);
-    this.saveCartToLocalStorage(updatedItems); // ✅ Save to localStorage
+    if (quantity < 1) {
+      this.removeFromCart(productId);
+      return;
+    }
+
+    const updatedItems = this.cartItems.getValue().map(item =>
+      item.product.id === productId ? { ...item, quantity } : item
+    );
+
+    this.saveAndEmit(updatedItems);
   }
 
   getTotal(): number {
-    return this.cartItems.getValue().reduce((total, item) => total + (item.product.price * item.quantity), 0);
+    return this.cartItems.getValue().reduce((total, item) => total + item.product.price * item.quantity, 0);
   }
 
   getAllProducts(): CartItem[] {
@@ -72,7 +69,6 @@ export class CartService {
   }
 
   clearCart() {
-    this.cartItems.next([]);
-    localStorage.removeItem('cart'); // ✅ Clear localStorage
+    this.saveAndEmit([]);
   }
 }
