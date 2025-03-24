@@ -6,6 +6,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { CartComponent } from './components/cart/cart.component';
 import { InsightpageComponent } from './components/insightpage/insightpage.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { SuccessComponent } from './components/success/success.component';
+import { CancelComponent } from './components/cancel/cancel.component';
 
 export const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -15,7 +17,8 @@ export const routes: Routes = [
   { path: 'insight', component: InsightpageComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'checkout', component: CheckoutComponent },
-
+  { path: 'success', component: SuccessComponent },
+  { path: 'cancel', component: CancelComponent },
   
   // { path: 'product/:name', component: InsightpageComponent },
 

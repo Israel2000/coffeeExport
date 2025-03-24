@@ -96,7 +96,7 @@ export class CartComponent implements OnInit, OnDestroy {
       script.src = "https://checkout.stripe.com/checkout.js";
       script.onload = () => {
         this.handler = (<any>window).StripeCheckout.configure({
-          key: 'pk_test_51HxRkiCumzEESdU2Z1FzfCVAJyiVHyHifo0GeCMAyzHPFme6v6ahYeYbQPpD9BvXbAacO2yFQ8ETlKjo4pkHSHSh00qKzqUVK9',
+          key: 'pk_test_51R5gPtBasuZF1zTnR6dD3LVtCcxsCec1FphAfOoIkz1YoSHJoAjEvRy3UZUXooq7eE2z6UntMOa8RaUHoOzkFAl900AjItI8Ty',
           locale: 'auto'
         });
       };
