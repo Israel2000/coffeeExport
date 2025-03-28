@@ -75,14 +75,10 @@ export class CartComponent implements OnInit, OnDestroy {
       token: (token: any) => { 
         console.log('Payment successful:', token);
         
-        // Move clearing cart only after payment success
         localStorage.removeItem('cart');
         this.cartService.clearCart();
         
-        // Navigate to products page
         this.router.navigate(['/products']);
-
-        // Notify user
         alert('Payment Successful!');
       }
     });
