@@ -92,8 +92,9 @@
                 </div>
               </div>-->
             </div> 
-  
-            <button class="btn btn-primary mt-3 w-100" type="submit" [disabled]="checkoutForm.invalid ">
+
+            <small *ngIf="isEmptyCart" class="text-danger">Your Cart is empty!</small>
+            <button class="btn btn-primary mt-3 w-100" type="submit" [disabled]="checkoutForm.invalid || isformsubmit || isEmptyCart">
                 Pay Now
               </button>              
   

@@ -23,6 +23,7 @@ export class CheckoutComponent implements OnInit {
   selectedPayment: string = 'card';
   isformsubmit: boolean = false;
   cartItems: CartItem[] = [];
+  isEmptyCart: Boolean = false;
   total: number = 0;
   private cartSubscription!: Subscription;
   stripe: any = null;
@@ -51,11 +52,13 @@ export class CheckoutComponent implements OnInit {
       this.cartItems = items;
       this.total = this.cartService.getTotal();
       if (this.cartItems.length === 0) {
-        confirm("Your cart is empty please add products in your cart first!")
-        this.router.navigate(['/products']);
+        // confirm("Your cart is empty please add products in your cart first!")
+        // this.router.navigate(['/products']);
+        this.isEmptyCart = true;
       }
     });
 
+    // this.stripe = await loadStripe('pk_live_51R4uyFFjJPqQAJtk75pzMIwoTUQecKxgU1BTDVnio8C9a5bbcwep4bxAS0mFIibtZP1dZV5iXmyejGwdpMarr2IR00GLof2GtD');
     this.stripe = await loadStripe('pk_test_51Ph3ex2Mrl7vQyfUr2VaoLSIgCRjDajOJAVqJ4eF2Cs2x7lXe8z5P71BOgAFkmC6mW0AjijcqlXVtZQJbhTVjIH600kntOVtsf');
 
     if (this.stripe) {
@@ -124,20 +127,19 @@ export class CheckoutComponent implements OnInit {
           line1: this.shippingDetails.address,
         },
       },
-    });
-    const orderData = {
-      paymentMethodId: paymentMethod.id,
-      shippingDetails: this.shippingDetails,
-      cartItems: this.cartItems,
-      totalAmount: this.total,
-    };
-
+    });    
     if (error) {
       this.isformsubmit = false;
       this.cardError = error.message;
     } else {
+      const orderData = {
+        paymentMethodId: paymentMethod.id,
+        shippingDetails: this.shippingDetails,
+        cartItems: this.cartItems,
+        totalAmount: this.total,
+      };
       try {
-        const response = await axios.post("http://localhost:3000/api/coffee/stripe/coffee_order", orderData);
+        const response = await axios.post("https://stripe-apis.vercel.app/api/coffee/stripe/coffee_order", orderData);
         localStorage.removeItem('cart');
         this.cartService.clearCart();
         this.router.navigate(['/success'], { state: { paymentSuccess: true } });
