@@ -58,8 +58,8 @@ export class CheckoutComponent implements OnInit {
       }
     });
 
-    // this.stripe = await loadStripe('pk_live_51R4uyFFjJPqQAJtk75pzMIwoTUQecKxgU1BTDVnio8C9a5bbcwep4bxAS0mFIibtZP1dZV5iXmyejGwdpMarr2IR00GLof2GtD');
-    this.stripe = await loadStripe('pk_test_51Ph3ex2Mrl7vQyfUr2VaoLSIgCRjDajOJAVqJ4eF2Cs2x7lXe8z5P71BOgAFkmC6mW0AjijcqlXVtZQJbhTVjIH600kntOVtsf');
+    this.stripe = await loadStripe('pk_live_51R4uyFFjJPqQAJtk75pzMIwoTUQecKxgU1BTDVnio8C9a5bbcwep4bxAS0mFIibtZP1dZV5iXmyejGwdpMarr2IR00GLof2GtD');
+    // this.stripe = await loadStripe('pk_test_51R5G37Qj3i4cL8ileMmZYGGGYd2eoF9pknfhI2uNe3MK0FEhH6g7sfeZkshQHV1N8myCrQctuyb3fXC8RLYy0MZT00g4Jm8bJZ');
 
     if (this.stripe) {
       const elements = this.stripe.elements();
