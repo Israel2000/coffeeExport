@@ -10,7 +10,7 @@ export class ProductService {
     {
       id: 1,
       name: "Espresso",
-      price: 4.49,
+      price: 7.49,
       description: "Espresso is a strong, rich coffee made by forcing hot water through finely-ground coffee beans.",
       image: "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=400",
       rating: 4.7,

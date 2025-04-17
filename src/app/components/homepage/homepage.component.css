@@ -1,24 +1,46 @@
 /* Parallax Section */
 .parallax {
   position: relative;
-  background-image: url('/./simple2.jpg'); /* Update this URL to the correct path */
-  background-attachment: fixed; /* This creates the parallax effect */
+  background-image: url('/./simple2.jpg');
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* Overlay Content */
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 60px 20px;
+  border-radius: 10px;
+  max-width: 700px;
   width: 100%;
 }
 
-/* Content to scroll over the parallax background */
-.content {
-  position: relative;
-  z-index: 2; /* Ensures the content stays above the background */
-  text-align: center;
-  color: white;
-  padding: 200px 20px;
-  font-size: 4rem;
-  font-weight: bolder;
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .btn-lg {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
 }
+
 
 /* Additional Sections for scrolling */
 .section {
@@ -69,13 +91,15 @@ p.text-white{
 p {
   font-size: 1.25rem;
   margin-bottom: 15px;
-  color: rgb(36 21 0) !important;
+  color: black!important;
+  font-weight: bolder;
 }
 
 h2, h1 {
   font-size: 3.5rem;
   font-weight: bold;
-  color: rgb(0, 0, 0)!important;
+  color: 
+  white!important;
 }
 
 .card {
@@ -140,7 +164,7 @@ div.card-body.text-center {
   border-bottom-right-radius: 10px;
 }
 p.card-text {
-  color: white !important;
+  color: black !important;
 }
 
 .about-products-section .position-relative {
@@ -150,6 +174,7 @@ p.card-text {
 .about-products-section img {
   height: 400px;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 .overlay-text {
@@ -174,3 +199,5 @@ p.card-text {
   font-size: 14px;
   margin: 0;
 }
+
+
