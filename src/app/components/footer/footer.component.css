@@ -39,10 +39,8 @@ footer .container {
   max-width: 1200px;
 }
 
-/* space line */
-.list-unstyled li {
-  margin-bottom: 10px;
-  /* inline */
-  display: inline;
-  padding-left: 10px;
+p {
+  margin-left: 20px;
 }
+
+/* space line */
