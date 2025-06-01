@@ -12,7 +12,7 @@ export class ProductService {
       name: "Sedamo",
       price: 7.49,
       description: "Espresso is a strong, rich coffee made by forcing hot water through finely-ground coffee beans.",
-      image: 'assets/images/coffee_bag.jpg', 
+      image: "/assets/images/sedamo-image.png", 
       rating: 4.7,
       reviews: 105
     },

@@ -1,7 +1,7 @@
 /* Parallax Section */
 .parallax {
   position: relative;
-  background-image: url('/./simple2.jpg');
+  background-image: url('/assets/images/titus-homebg.png');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -46,7 +46,7 @@
 .section {
   padding: 50px 20px;
   text-align: center;
-  background-color: #ffffffd0;
+  background-color: #C6A46B;
 }
 
 /* Hero Section */
