@@ -17,7 +17,7 @@ export class ContactComponent {
     emailjs
       .sendForm(
         'service_yckfuua',      //emailjs service ID
-        'template_zz31dm2',     //emailjs template ID
+        'template_zfdeuqd',     //emailjs template ID
         e.target as HTMLFormElement,
         {
           publicKey: 'QyE6mWSbbbvjCixad',  //emailjs public key
