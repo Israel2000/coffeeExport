@@ -7,6 +7,8 @@ import { CartItem } from '../../models/product.model';
 import { Router, RouterModule } from '@angular/router';
 import { FooterComponent } from "../footer/footer.component";
 import { Subscription } from 'rxjs';
+import { Product } from '../../models/product.model';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-cart',

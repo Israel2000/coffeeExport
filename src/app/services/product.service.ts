@@ -9,27 +9,27 @@ export class ProductService {
   private products: Product[] = [
     {
       id: 1,
-      name: "Sedamo",
-      price: 7.49,
-      description: "Espresso is a strong, rich coffee made by forcing hot water through finely-ground coffee beans.",
-      image: "/assets/images/sedamo-image.png", 
-      rating: 4.7,
-      reviews: 105
+      name: "Sidama",
+      price: "9.99/Ib",
+      description: "known for its bright, citrusy, and floral notes, with a medium body and smooth finish",
+      image: "/assets/images/sidama-Beans.png", 
+      rating: 4.9,
+      reviews: 4
     },
     {
       id: 2,
-      name: "Latte",
-      price: 4.49,
-      description: "Latte is a creamy coffee drink made with espresso and steamed milk.",
+      name: "Ethiopian Yirgacheffe",
+      price: "8.99/Ib",
+      description: "Known for Blueberry, chocolate, floral flavor Cane sugar.",
       image: "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=400",
-      rating: 4.7,
-      reviews: 105
+      rating: 4.8,
+      reviews: 5
     },
     {
       id: 3,
-      name: "Cappuccino",
-      price: 4.49,
-      description: "Cappuccino is a strong, rich coffee made by forcing hot water through finely-ground coffee beans.",
+      name: "Guji",
+      price: "7.99/Ib",
+      description: "Known for Floral, Green tea, Can sugar, Lime, and White grape flavor",
       image: "https://images.unsplash.com/photo-1534778101976-62847782c213?w=400",
       rating: 4.7,
       reviews: 105
