@@ -28,16 +28,16 @@ div.card-body {
   
 }
 
-.btn-primary {
+.btn.btn-outline-primary {
   background-color: #ffeecf;
   border: none;
   color: #2a1803;
   font-weight: bold;
 }
 
-.btn-primary:hover {
+.btn.btn-outline-primary:hover {
   background-color: #cf9633;
-  color: #2a1803;
+  color: white;
 }
 
 /*  */

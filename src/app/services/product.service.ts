@@ -10,7 +10,7 @@ export class ProductService {
     {
       id: 1,
       name: "Sidama",
-      price: "9.99/Ib",
+      price: 9.99,
       description: "known for its bright, citrusy, and floral notes, with a medium body and smooth finish",
       image: "/assets/images/sidama-Beans.png", 
       rating: 4.9,
@@ -19,18 +19,18 @@ export class ProductService {
     {
       id: 2,
       name: "Ethiopian Yirgacheffe",
-      price: "8.99/Ib",
+      price: 8.99,
       description: "Known for Blueberry, chocolate, floral flavor Cane sugar.",
-      image: "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=400",
+      image: "/assets/images/comingsoon.jpg",
       rating: 4.8,
       reviews: 5
     },
     {
       id: 3,
       name: "Guji",
-      price: "7.99/Ib",
+      price: 7.99,
       description: "Known for Floral, Green tea, Can sugar, Lime, and White grape flavor",
-      image: "https://images.unsplash.com/photo-1534778101976-62847782c213?w=400",
+      image: "/assets/images/comingsoon.jpg",
       rating: 4.7,
       reviews: 105
     },
